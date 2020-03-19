@@ -23,7 +23,7 @@ def merge( arrA, arrB ):
 def merge_sort(arr):
     size = len(arr)
 
-    if(size == 1):
+    if(size == 0 or size == 1):
         return arr
 
     mid = int(size/2)
@@ -33,7 +33,6 @@ def merge_sort(arr):
     arrMidToEnd = merge_sort(arr[mid:])
     arr = merge(arrStartToMid, arrMidToEnd)   
     return arr
-
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
